@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
         final center = LatLng(message.getFloat64(0, Endian.little), message.getFloat64(8, Endian.little));
         final zoom = message.getFloat32(16, Endian.little);
         final rotation = message.getFloat32(20, Endian.little);
-        controller.moveAndRotate(center, zoom, rotation);
+        controller.moveAndRotate(center, zoom, -rotation);
       },
     );
   }
