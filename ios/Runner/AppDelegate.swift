@@ -41,7 +41,10 @@ class GoogleMapsViewController: UIViewController, GMSMapViewDelegate {
         let camera = GMSCameraPosition.camera(withLatitude: 46.0569, longitude: 14.5058, zoom: 11.5)
         mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         mapView!.delegate = self
-        mapView!.isTrafficEnabled = true;
+        mapView!.isTrafficEnabled = true
+        mapView!.settings.rotateGestures = false
+        mapView!.settings.zoomGestures = false
+        mapView!.settings.tiltGestures = false
         self.view.addSubview(mapView!)
     }
     
